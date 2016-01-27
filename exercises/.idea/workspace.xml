@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ada44e80-c3dd-45ae-be3f-f06f183ec834" name="Default" comment="IntelliJ project structure">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/scala-xml_2.11-1.0.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/scalatest_2.11-2.2.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/scala_xml_2_11_1_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/scalatest_2_11_2_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/calculator/calculator.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/calculator/src/se/citerus/scala/calculator/Calculator.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/calculator/test/se/citerus/scala/calculator/CalculatorTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="ada44e80-c3dd-45ae-be3f-f06f183ec834" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises.iml" afterPath="$PROJECT_DIR$/exercises.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calculator/src/se/citerus/scala/calculator/Calculator.scala" afterPath="$PROJECT_DIR$/calculator/src/se/citerus/scala/calculator/Calculator.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calculator/test/se/citerus/scala/calculator/CalculatorTest.scala" afterPath="$PROJECT_DIR$/calculator/test/se/citerus/scala/calculator/CalculatorTest.scala" />
     </list>
     <ignored path="exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CalculatorTest.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalculatorTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calculator/test/se/citerus/scala/calculator/CalculatorTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41396105">
-              <caret line="15" column="27" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculator.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Calculator.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/calculator/src/se/citerus/scala/calculator/Calculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.28246754">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -83,8 +73,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/calculator/test/se/citerus/scala/calculator/Calculator.scala" />
-        <option value="$PROJECT_DIR$/calculator/src/se/citerus/scala/calculator/Calculator.scala" />
         <option value="$PROJECT_DIR$/calculator/test/se/citerus/scala/calculator/CalculatorTest.scala" />
+        <option value="$PROJECT_DIR$/calculator/src/se/citerus/scala/calculator/Calculator.scala" />
       </list>
     </option>
   </component>
@@ -253,7 +243,7 @@
       <recent name="se.citerus.scala.calculator" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.CalculatorTest">
+  <component name="RunManager" selected="Application.Calculator">
     <configuration default="false" name="CalculatorTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="calculator" />
@@ -266,6 +256,34 @@
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Calculator" type="Application" factoryName="Application" temporary="true">
+      <extension name="chronon">
+        <include>
+          <pattern>
+            <option name="PATTERN" value="se.citerus.scala.calculator.**" />
+            <option name="ENABLED" value="true" />
+          </pattern>
+        </include>
+      </extension>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="se.citerus.scala.calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="se.citerus.scala.calculator.Calculator" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="calculator" />
       <envs />
       <method />
     </configuration>
@@ -627,12 +645,14 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="ScalaTest.CalculatorTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Calculator" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.CalculatorTest" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.Calculator" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.CalculatorTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
@@ -657,7 +677,7 @@
       <option name="number" value="Default" />
       <updated>1453883496796</updated>
       <workItem from="1453883498821" duration="615000" />
-      <workItem from="1453884365436" duration="904000" />
+      <workItem from="1453884365436" duration="2901000" />
     </task>
     <task id="LOCAL-00001" summary="IntelliJ project structure">
       <created>1453883613728</created>
@@ -665,7 +685,19 @@
       <option name="project" value="LOCAL" />
       <updated>1453883613728</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Libs">
+      <created>1453885295957</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1453885295957</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First calculator exercise">
+      <created>1453886605424</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1453886605424</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -675,9 +707,30 @@
     <history-entry file="CalculatorTest - 2016.01.27 at 09h 59m 08s.xml">
       <configuration name="CalculatorTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="CalculatorTest - 2016.01.27 at 10h 01m 51s.xml">
+      <configuration name="CalculatorTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalculatorTest - 2016.01.27 at 10h 04m 51s.xml">
+      <configuration name="CalculatorTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalculatorTest - 2016.01.27 at 10h 06m 05s.xml">
+      <configuration name="CalculatorTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalculatorTest - 2016.01.27 at 10h 06m 36s.xml">
+      <configuration name="CalculatorTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalculatorTest - 2016.01.27 at 10h 07m 31s.xml">
+      <configuration name="CalculatorTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalculatorTest - 2016.01.27 at 10h 10m 23s.xml">
+      <configuration name="CalculatorTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalculatorTest - 2016.01.27 at 10h 12m 46s.xml">
+      <configuration name="CalculatorTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1519000" />
+    <option name="totallyTimeSpent" value="3516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1632" height="1053" extended-state="0" />
@@ -715,7 +768,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="IntelliJ project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="IntelliJ project structure" />
+    <MESSAGE value="Libs" />
+    <MESSAGE value="First calculator exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="First calculator exercise" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -734,18 +789,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculator/src/se/citerus/scala/calculator/Calculator.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/io/StdIn.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/Predef.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="309" column="6" selection-start-line="309" selection-start-column="6" selection-end-line="309" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/calculator/test/se/citerus/scala/calculator/CalculatorTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41396105">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/math/BigDecimal.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7386364">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#555#581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3051948">
+          <caret line="81" column="37" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculator/src/se/citerus/scala/calculator/Calculator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28246754">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding />
         </state>
       </provider>
