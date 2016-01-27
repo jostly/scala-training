@@ -22,15 +22,20 @@ class Calculator(accumulatedGross: BigDecimal,
 }
 
 object Calculator {
-  def main(args: Array[String]): Unit = {
-    var accumulatedGross = BigDecimal(readLine("Accumulated gross purchases: "))
-    val purchaseAmount = BigDecimal(readLine("Purchase amount: "))
 
+  def calculate(accumulatedGross: BigDecimal, purchaseAmount: BigDecimal): (BigDecimal, BigDecimal) = {
     val amountToPay = new Calculator(accumulatedGross = accumulatedGross).amountToPay(purchaseAmount)
 
-    accumulatedGross += purchaseAmount
+    (accumulatedGross + purchaseAmount, amountToPay)
+  }
+
+  def main(args: Array[String]): Unit = {
+    val accumulatedGross = BigDecimal(readLine("Accumulated gross purchases: "))
+    val purchaseAmount = BigDecimal(readLine("Purchase amount: "))
+
+    val (newAccumulatedGross, amountToPay) = calculate(accumulatedGross, purchaseAmount)
 
     println(s"Amount to pay: $amountToPay")
-    println(s"New accumulated gross: $accumulatedGross")
+    println(s"New accumulated gross: $newAccumulatedGross")
   }
 }
