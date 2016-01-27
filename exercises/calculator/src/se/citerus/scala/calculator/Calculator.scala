@@ -1,10 +1,13 @@
 package se.citerus.scala.calculator
 
 import scala.io.StdIn.readLine
+import scala.util.{Failure, Success, Try}
 
 class Calculator(accumulatedGross: BigDecimal,
                  limit: BigDecimal = BigDecimal(100),
                  discountPercentage: BigDecimal = BigDecimal(10)) {
+
+  require(accumulatedGross >= 0, "accumulated gross must be 0 or greater")
 
   def amountToPay(purchaseAmount: BigDecimal): BigDecimal =
     if (accumulatedGross >= limit) {
@@ -29,13 +32,27 @@ object Calculator {
     (accumulatedGross + purchaseAmount, amountToPay)
   }
 
+
   def main(args: Array[String]): Unit = {
-    val accumulatedGross = BigDecimal(readLine("Accumulated gross purchases: "))
-    val purchaseAmount = BigDecimal(readLine("Purchase amount: "))
 
-    val (newAccumulatedGross, amountToPay) = calculate(accumulatedGross, purchaseAmount)
+    val input = readInput
 
-    println(s"Amount to pay: $amountToPay")
-    println(s"New accumulated gross: $newAccumulatedGross")
+    input.map(i => calculate(i._1, i._2)) match {
+      case Success((newAccumulatedGross, amountToPay)) =>
+        println(s"Amount to pay: $amountToPay")
+        println(s"New accumulated gross: $newAccumulatedGross")
+      case Failure(e: NumberFormatException) =>
+        println("Input a valid decimal number")
+      case Failure(e) =>
+        println("Illegal input: " + e.getMessage)
+    }
+
+  }
+
+  def readInput: Try[(BigDecimal, BigDecimal)] = {
+    Try((
+      BigDecimal(readLine("Accumulated gross purchases: ")),
+      BigDecimal(readLine("Purchase amount: "))
+      ))
   }
 }
