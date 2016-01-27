@@ -11,5 +11,6 @@
     <orderEntry type="library" name="scala-sdk-2.11.7 (3)" level="application" />
     <orderEntry type="library" exported="" name="scalatest_2.11-2.2.6" level="project" />
     <orderEntry type="library" name="scala-xml_2.11-1.0.5" level="project" />
+    <orderEntry type="library" name="scalamock-core_2.11-3.2.2" level="project" />
   </component>
 </module>
