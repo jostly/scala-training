@@ -1,8 +1,11 @@
-import scala.util.{Failure, Success, Try}
+import java.util.Date
 
-def someFunction(): Int = ???
+case class MemberRecord(firstPurchase: Date, accumulatedValue: BigDecimal)
 
-Try(someFunction()) match {
-  case Success(v) => println(s"Got return value: $v")
-  case Failure(t) => println(s"Something went wrong: $t")
+val record: Option[MemberRecord] = ??? // look up record in storage
+
+record match {
+  case None => ???
+  case Some(MemberRecord(date, value)) if date.before(oneYearAgo()) => ???
+  case Some(MemberRecord(date, value)) => ???
 }
