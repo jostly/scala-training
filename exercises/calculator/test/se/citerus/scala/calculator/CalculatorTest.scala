@@ -41,14 +41,14 @@ class CalculatorTest extends FunSuite {
   test("run calculator") {
     val io = new IoStub(
       "Accumulated purchase value: " -> "50",
-      "Purchase amount: " -> "100"
+      "Purchase amount: " -> "100.5"
     )
 
     Calculator.run(io.prompt, io.display)
 
     assert(io.displays === List(
-      "Amount to pay: 95",
-      "New accumulated purchase value: 150"
+      "Amount to pay: 95.45",
+      "New accumulated purchase value: 150.50"
     ))
   }
 

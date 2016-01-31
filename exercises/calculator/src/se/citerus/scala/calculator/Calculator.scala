@@ -1,6 +1,7 @@
 package se.citerus.scala.calculator
 
 import scala.io.StdIn.readLine
+import scala.math.BigDecimal.RoundingMode
 import scala.util.{Failure, Success, Try}
 
 class Calculator(accumulatedGross: BigDecimal,
@@ -27,7 +28,7 @@ object Calculator {
   private def calculate(accumulatedGross: BigDecimal, purchaseAmount: BigDecimal): (BigDecimal, BigDecimal) = {
     val amountToPay = new Calculator(accumulatedGross = accumulatedGross).amountToPay(purchaseAmount)
 
-    (accumulatedGross + purchaseAmount, amountToPay)
+    ((accumulatedGross + purchaseAmount).setScale(2, RoundingMode.HALF_UP), amountToPay.setScale(2, RoundingMode.HALF_UP))
   }
 
   def run(prompt: String => String, display: String => Unit): Unit = {
