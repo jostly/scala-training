@@ -1,4 +1,4 @@
-package se.citerus.scalatraining.exercise_4
+package se.citerus.scalatraining.collections
 
 import java.time.LocalDate
 import java.time.LocalDate.now

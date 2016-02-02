@@ -1,4 +1,4 @@
-package se.citerus.scalatraining.exercise_4
+package se.citerus.scalatraining.collections
 
 object Calculator {
 
