@@ -16,7 +16,18 @@ class Consumer(val storage: Storage = Storage()) {
   }
 
   // Implement in exercise 5
-  def increaseAccumulatedValue(id: String, amount: BigDecimal): Future[BigDecimal] = ???
+  def increaseAccumulatedValue(id: String, amount: BigDecimal): Future[BigDecimal] = {
+
+    val t: Future[Account] = findById(id).map {
+      case Some(account) => account.copy(accumulatedValue = account.accumulatedValue + amount)
+      case None => Account(id, LocalDate.now(), amount)
+    }
+
+    val s: Future[Account] = t.flatMap { updatedAccount => save(updatedAccount) }
+
+    s.map { acct => acct.accumulatedValue }
+  }
+
 
   // Implement in exercise 7
   def allAccounts(): Future[Set[Account]] = ???
