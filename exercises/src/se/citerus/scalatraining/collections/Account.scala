@@ -2,6 +2,8 @@ package se.citerus.scalatraining.collections
 
 import java.time.LocalDate
 
+import scala.util.Try
+
 class Account(val purchases: List[Purchase]) {
 
   def purchase(purchaseDate: LocalDate, purchaseValue: BigDecimal): Account = {
@@ -18,9 +20,19 @@ class Account(val purchases: List[Purchase]) {
     new Account(purchase :: purchases)
   }
 
-  def lastPaidAmount: BigDecimal = ???
+  def lastPaidAmount: BigDecimal = Try(purchases.head.amountPaid).getOrElse(0)
 
-  def accumulatedValue(date: LocalDate): BigDecimal = ???
+  def accumulatedValue(date: LocalDate): BigDecimal = {
+    val oneYearAgo = date.minusYears(1)
+    val firstPurchaseOfLoyaltyPeriod = purchases.find(_.accumulatedValue == 0)
+
+    firstPurchaseOfLoyaltyPeriod match {
+      case Some(Purchase(d, _, _, _)) if d.isAfter(oneYearAgo) =>
+        purchases.headOption.map(p => p.accumulatedValue + p.value).getOrElse(0)
+      case _ =>
+        0
+    }
+  }
 
   override def toString: String =
     s"Account(currentAccumulatedValue = ${accumulatedValue(LocalDate.now())}, lastPaidAmount: $lastPaidAmount)"
