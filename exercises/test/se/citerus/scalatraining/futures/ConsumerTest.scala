@@ -5,7 +5,10 @@ import java.time.LocalDate
 import org.scalatest.concurrent.{IntegrationPatience, Eventually}
 import org.scalatest.{Matchers, FunSuite}
 
+import scala.concurrent.Await
 import scala.util.Success
+
+import scala.concurrent.duration._
 
 class ConsumerTest extends FunSuite with Matchers with Eventually with IntegrationPatience {
 
@@ -20,6 +23,21 @@ class ConsumerTest extends FunSuite with Matchers with Eventually with Integrati
     eventually {
       result.value should be (Some(Success(BigDecimal(30))))
     }
+  }
+
+  test("allaccounts") {
+    val consumer = new Consumer()
+
+    val accounts = consumer.allAccounts()
+
+    val t0 = System.currentTimeMillis()
+
+    println(Await.result(accounts, 5.second))
+
+    val t1 = System.currentTimeMillis()
+
+    println(s"It took ${t1-t0} ms")
+
   }
 
 }

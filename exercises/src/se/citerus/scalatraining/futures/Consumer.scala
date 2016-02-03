@@ -2,8 +2,10 @@ package se.citerus.scalatraining.futures
 
 import java.time.LocalDate
 
-import scala.concurrent.Future
+import scala.concurrent.{Await, Future}
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration._
+
 
 class Consumer(val storage: Storage = Storage()) {
 
@@ -30,7 +32,35 @@ class Consumer(val storage: Storage = Storage()) {
 
 
   // Implement in exercise 7
-  def allAccounts(): Future[Set[Account]] = ???
+  def allAccounts(): Future[Set[Option[Account]]] = {
+    val allIds = ids
+    allIds.flatMap { (setOfIds: Set[String]) =>
+      val futureAccounts: List[Future[Option[Account]]] = setOfIds.map(id => findById(id)).toList
+
+      val extracted: Future[List[Option[Account]]] = extractFutures(futureAccounts, Nil)
+
+      extracted.map(list => list.toSet)
+    }
+  }
+
+  /*
+  A functional mindset:
+  Extracing all the values of a list of futures is the same as
+  - extracting the value of the first future and
+  - appending the extracted values of the rest of the list of futures
+
+  Implement this as a recursive function, which uses an acc parameter to collect
+  the list of extracted futures
+   */
+
+  def extractFutures[T](futures: List[Future[T]], acc: List[T]): Future[List[T]] = {
+    futures match {
+      case x :: xs =>
+        x.flatMap(a => extractFutures(xs, a :: acc))
+      case Nil =>
+        Future(acc)
+    }
+  }
 
   // Implement in exercise 8
   def activeAccounts(today: LocalDate): Future[Set[Account]] = ???
