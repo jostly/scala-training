@@ -1,3 +1,6 @@
 out/
+target/
+.idea/
 *.sc
-.idea/workspace.xml
+*.iml
+
