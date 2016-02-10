@@ -1,4 +1,4 @@
-package se.citerus.practicalscala.exercise1
+package se.citerus.practicalscala.basic
 
 object CalculatorApp {
 
